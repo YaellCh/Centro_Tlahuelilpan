@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Grupo - Centro Cultural Tlahuelilpan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="form-page-body">
+
+    <header class="admin-header">
+        <div class="container">
+            <div>
+                <strong>Centro Cultural Regional Tlahuelilpan</strong> 
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="#" class="nav-link">Personal Administrativo</a>
+                <a href="#" class="nav-link btn-session">Iniciar sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="form-wrapper">
+        <form class="form-container">
+            
+            <h2 class="delete-warning">¿Eliminar Grupo?</h2>
+
+            <div class="form-section">
+                
+                <div class="input-group">
+                    <label for="nombre_grupo">Nombre del Grupo</label>
+                    <input type="text" id="nombre_grupo" name="nombre_grupo" class="form-input" value="BALLET INFANTIL" readonly>
+                </div>
+                
+                <div class="input-group">
+                    <label for="taller">Taller</label>
+                    <input type="text" id="taller" name="taller" class="form-input" value="BALLET" readonly>
+                </div>
+                
+                <div class="input-group">
+                    <label for="docente">Docente</label>
+                    <input type="text" id="docente" name="docente" class="form-input" value="ANA PATRICIA MARTINEZ" readonly>
+                </div>
+                
+                <div class="input-group">
+                    <label for="horario">Horario</label>
+                    <input type="text" id="horario" name="horario" class="form-input" value="MARTES Y JUEVES 5 - 6:30 PM" readonly>
+                </div>
+                
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-submit btn-delete-action">Eliminar</button>
+                
+                <button type="button" class="btn-secondary" onclick="history.back()">Cancelar</button>
+            </div>
+
+        </form>
+    </main>
+
+</body>
+</html>

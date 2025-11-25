@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión y Progreso de Alumno - Centro Cultural Tlahuelilpan</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Definición de colores basados en la paleta y style.css */
+        :root {
+            /* Mapeando colores de style.css para uso local */
+            --azul-principal-progress: #1B3A5C; 
+            --gris-claro: #F5F5F5;
+            --azul-oscuro: #333333; 
+            --blanco: #FFFFFF;
+            
+            /* Colores de tags y botones (basados en las imágenes) */
+            --tag-inscrito: #4E63D9; /* Un azul vibrante de la paleta */
+            --tag-egresado: #5cb85c; /* Verde para egresado */
+            --btn-agregar: #4E63D9;
+            --btn-cancelar: #A9A9A9;
+        }
+
+        /* Contenedor principal para ambas secciones */
+        .gestion-wrapper {
+            max-width: 900px;
+            margin: 40px auto;
+        }
+        
+        /* Estilos del Formulario Agregar a Grupo */
+        .form-container.gestion {
+            margin-top: 0;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra para que se vea como tarjeta */
+        }
+        .input-group-static {
+            margin-bottom: 15px;
+        }
+        .input-group-static .static-label {
+            font-weight: bold;
+            color: var(--azul-oscuro);
+            display: block;
+            margin-bottom: 5px;
+        }
+        .input-group-static .static-value {
+            padding: 10px 15px;
+            background-color: var(--gris-claro);
+            border-radius: 4px;
+            font-weight: bold;
+            color: var(--azul-oscuro);
+        }
+        .action-centered {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding-top: 20px;
+        }
+        .btn-submit {
+            background-color: var(--btn-agregar); 
+            color: var(--blanco);
+            padding: 10px 30px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .btn-secondary {
+            background-color: var(--btn-cancelar); 
+            color: var(--blanco);
+            padding: 10px 30px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Estilos de la Tarjeta de Progreso Estudiantil */
+        .progreso-section {
+            background-color: var(--blanco);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .progreso-section h2 {
+            color: var(--azul-oscuro);
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
+        
+        /* Tarjeta de curso individual */
+        .curso-card {
+            border-left: 5px solid var(--azul-principal-progress);
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            background-color: var(--gris-claro);
+            border-radius: 4px;
+            position: relative;
+        }
+        
+        .curso-card h3 {
+            color: var(--azul-principal-progress);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        /* Contenedor principal de la información, dividido en 2 columnas */
+        .progreso-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            font-size: 0.95rem;
+        }
+
+        /* Columna de datos (Ej. Taller y Calificación) */
+        .progreso-columna {
+            flex: 1; 
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Cada par Etiqueta-Valor */
+        .progreso-item {
+            margin-bottom: 10px;
+        }
+        .progreso-item label {
+            font-weight: bold;
+            color: var(--azul-oscuro);
+            display: block; /* La etiqueta ocupa su propia línea */
+            margin-bottom: 2px;
+            font-size: 0.9rem;
+        }
+        
+        .progreso-item span {
+            font-weight: normal;
+            color: var(--azul-oscuro); 
+            display: block; /* El valor ocupa su propia línea */
+        }
+
+        /* Estilos de Tags de Estado */
+        .progreso-tag {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            color: var(--blanco);
+        }
+        .tag-egresado {
+            background-color: var(--tag-egresado); 
+        }
+        .tag-inscrito {
+            background-color: var(--tag-inscrito);
+        }
+    </style>
+</head>
+<body class="form-page-body">
+
+    <header class="admin-header">
+        <div class="container">
+            <div>
+                <strong>Centro Cultural Regional Tlahuelilpan</strong> 
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="#" class="nav-link">Personal Administrativo</a>
+                <a href="#" class="nav-link btn-session">Iniciar sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="form-wrapper gestion-wrapper">
+        
+        <form class="form-container gestion">
+            
+            <h2>Agregar Alumno a Grupo</h2>
+
+            <div class="form-section">
+                <div class="input-group-static">
+                    <label class="static-label" for="nombre_alumno">Alumno:</label>
+                    <div class="static-value">CAROLINE SAMANTHA ROMERO GONZÁLEZ</div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Seleccionar Grupo</h3>
+                
+                <div class="input-group">
+                    <label for="grupo">Grupos Disponibles</label>
+                    <select id="grupo" name="grupo" class="form-input">
+                        <option value="">-- Seleccionar Grupo --</option>
+                        <option value="ballet_a">Ballet Infantil Grupo A</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-actions action-centered">
+                <button type="submit" class="btn-submit">Agregar</button>
+                <button type="button" class="btn-secondary" onclick="history.back()">Cancelar</button>
+            </div>
+
+        </form>
+
+        <div class="progreso-section">
+            
+            <h2>Progreso Estudiantil</h2>
+
+            <div class="curso-card">
+                <span class="progreso-tag tag-egresado">Egresado</span>
+                
+                <h3>BALLET</h3>
+                
+                <div class="progreso-container">
+                    
+                    <div class="progreso-columna">
+                        <div class="progreso-item">
+                            <label>Taller:</label> <span>BALLET</span>
+                        </div>
+                        <div class="progreso-item">
+                            <label>Calificación:</label> <span>8.50</span>
+                        </div>
+                    </div>
+
+                    <div class="progreso-columna">
+                        <div class="progreso-item">
+                            <label>Docente:</label> <span>ANA PATRICIA MARTINEZ</span>
+                        </div>
+                        <div class="progreso-item">
+                            <label>Asistencias:</label> <span>85.00%</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="curso-card">
+                <span class="progreso-tag tag-inscrito">Inscrito</span>
+                
+                <h3>EXPLORACIÓN 1</h3>
+                
+                <div class="progreso-container">
+                    
+                    <div class="progreso-columna">
+                        <div class="progreso-item">
+                            <label>Taller:</label> <span>EXPLORACIÓN ARTÍSTICA</span>
+                        </div>
+                        <div class="progreso-item">
+                            <label>Calificación:</label> <span>N/A</span>
+                        </div>
+                    </div>
+
+                    <div class="progreso-columna">
+                        <div class="progreso-item">
+                            <label>Docente:</label> <span>PAULINA HERNÁNDEZ</span>
+                        </div>
+                        <div class="progreso-item">
+                            <label>Asistencias:</label> <span>75.00%</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+    </main>
+</body>
+</html>

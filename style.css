@@ -1,0 +1,1187 @@
+/* Colores Centro Cultural Tlahuelilpan (Nueva Paleta) */
+:root {
+    /* Paleta de colores principal */
+    --azul-principal: #0455BF;   /* Azul Brillante, dominante para acentos y CTA */
+    --azul-oscuro: #020659;      /* Azul Marino, para texto, header y footer */
+    --azul-secundario: #03178C;  /* Azul Intermedio, para degradados */
+    
+    /* Colores de acento */
+    --color-acento: #730C02;     /* Rojo Tierra */
+    --rojo-alerta: #F20505;      /* Rojo Vivo */
+    
+    /* Colores neutros */
+    --blanco: #FFFFFF;
+    /* Mantengo el gris claro tradicional para mejor legibilidad de fondo */
+    --gris-claro: #F5F5F5; 
+    --negro: #0D0D0D; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    /* Cambio: Usar el azul oscuro para el color de texto principal */
+    color: var(--azul-oscuro); 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    /* Cambio: Fondo con el azul oscuro de la paleta */
+    background-color: var(--azul-oscuro); 
+    color: var(--blanco);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* Hero Section */
+.hero {
+    /* Cambio: Degradado usando los dos azules oscuros de la paleta para mayor profundidad */
+    background: linear-gradient(135deg, var(--azul-secundario) 0%, var(--azul-oscuro) 100%);
+    color: var(--blanco);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* About Section */
+.about {
+    padding: 4rem 0;
+    background-color: var(--blanco);
+}
+
+.about h2 {
+    /* Cambio: Títulos con el azul principal/dominante */
+    color: var(--azul-principal); 
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Activities Section */
+.activities {
+    padding: 4rem 0;
+    /* Cambio: Fondo con el gris-claro */
+    background-color: var(--gris-claro); 
+}
+
+.activities h2 {
+    /* Cambio: Títulos con el azul principal/dominante */
+    color: var(--azul-principal); 
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.activity-card {
+    background-color: var(--blanco);
+    border-radius: 8px;
+    overflow: hidden;
+    /* Sombra con el color negro de la paleta */
+    box-shadow: 0 4px 6px rgba(13, 13, 13, 0.1); 
+    transition: transform 0.3s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+}
+
+.activity-card h3 {
+    /* Cambio: Títulos de tarjetas con el azul principal */
+    color: var(--azul-principal); 
+    padding: 1rem;
+    font-size: 1.3rem;
+}
+
+.activity-card p {
+    padding: 0 1rem 1.5rem;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 4rem 0;
+    background-color: var(--blanco);
+}
+
+.gallery h2 {
+    /* Cambio: Títulos con el azul principal/dominante */
+    color: var(--azul-principal); 
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+/* Image Placeholder */
+.image-placeholder {
+    width: 100%;
+    height: 250px;
+    /* Cambio: Fondo con el gris-claro */
+    background-color: var(--gris-claro); 
+    /* Cambio: Borde con el azul principal */
+    border: 2px dashed var(--azul-principal); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-caption {
+    position: absolute;
+    /* Cambio: Fondo de caption con el azul oscuro con opacidad */
+    background-color: rgba(2, 6, 89, 0.8); 
+    color: var(--blanco);
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* CTA Section */
+.cta {
+    /* Cambio: Fondo con el azul principal/dominante */
+    background-color: var(--azul-principal); 
+    color: var(--blanco);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--blanco);
+    /* Cambio: Color de texto del botón con el azul principal */
+    color: var(--azul-principal); 
+    padding: 1rem 3rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    /* Sombra con el color negro de la paleta */
+    box-shadow: 0 4px 15px rgba(13, 13, 13, 0.2); 
+}
+
+.btn-primary:hover {
+    /* Cambio: Puedes usar el color acento para el hover del texto o mantener el color. 
+       Para mejor legibilidad, mantendremos el fondo blanco-gris claro. */
+    background-color: var(--gris-claro); 
+    transform: scale(1.05);
+    /* Sombra con el color negro de la paleta */
+    box-shadow: 0 6px 20px rgba(13, 13, 13, 0.3); 
+    /* Opcional: Podrías cambiar el color de texto en hover si lo deseas */
+    /* color: var(--rojo-alerta); */ 
+}
+
+/* Footer */
+footer {
+    /* Cambio: Fondo con el azul oscuro */
+    background-color: var(--azul-oscuro); 
+    color: var(--blanco);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .activities-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* ======================================= */
+/* ESTILOS ESPECÍFICOS DEL FORMULARIO ADMIN */
+/* ======================================= */
+
+/* 1. Estilos del cuerpo y fondo */
+.form-page-body {
+    /* Usa el gris claro de la paleta como fondo de la página */
+    background-color: var(--gris-claro); 
+    min-height: 100vh;
+    /* Ajusta el padding para dar espacio al header fijo */
+    padding-top: 2rem; 
+}
+
+/* 2. Estilos del Header Administrativo (Barra Superior) */
+.admin-header {
+    /* Fondo con el azul marino oscuro */
+    background-color: var(--azul-oscuro); 
+    color: var(--blanco);
+    padding: 1rem 0;
+    /* Para que la barra siempre esté visible arriba */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.admin-header .container {
+    display: flex;
+    /* Separa el título de los enlaces */
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.admin-header .nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.admin-header .nav a:hover {
+    /* Usa el azul principal para el hover de los enlaces */
+    background-color: var(--azul-principal); 
+}
+
+/* 3. Contenedor Principal y Tarjeta del Formulario */
+.form-wrapper {
+    /* CENTRA el formulario en la pantalla */
+    display: flex;
+    justify-content: center;
+    /* Añade espacio arriba/abajo para que no toque los bordes */
+    padding: 20px; 
+}
+
+.form-container {
+    /* Define el ancho máximo de la tarjeta blanca */
+    max-width: 900px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    background-color: var(--blanco);
+    padding: 40px;
+    border-radius: 8px;
+    /* Sombra sutil para destacar la tarjeta */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+}
+
+.form-container h2 {
+    /* Título "Agregar Alumno" en azul oscuro */
+    color: var(--azul-oscuro); 
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+/* 4. Estilos de Secciones y Subtítulos */
+.form-section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    /* Usa el gris claro para la línea divisoria */
+    border-bottom: 1px solid var(--gris-claro); 
+}
+
+.form-section:last-child {
+    border-bottom: none;
+}
+
+.form-section h3 {
+    /* Subtítulos de sección ("Documentación...") en azul principal */
+    color: var(--azul-principal); 
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* 5. Estilos de Checkboxes (Documentación) */
+.checkbox-group {
+    /* Distribuye los checkboxes en 3 columnas */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px 30px;
+}
+
+.input-group-checkbox label {
+    /* Alineación de texto con el checkbox */
+    margin-left: 8px; 
+    font-size: 1rem;
+}
+
+/* 6. Estilos de Inputs (Datos Personales) */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    color: var(--azul-oscuro);
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-input:focus {
+    /* Borde de foco con el azul principal de la paleta */
+    border-color: var(--azul-principal); 
+    /* Sombra de foco sutil */
+    box-shadow: 0 0 0 3px rgba(4, 85, 191, 0.2); 
+    outline: none;
+}
+
+/* 7. Estilos del Botón Guardar */
+.form-actions {
+    text-align: left; /* Alineado a la izquierda según tu imagen de referencia */
+    margin-top: 30px;
+}
+
+.btn-submit {
+    /* Color principal del botón */
+    background-color: var(--azul-principal); 
+    color: var(--blanco);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    /* Hover con el azul secundario */
+    background-color: var(--azul-secundario); 
+}
+
+/* 8. Estilos de Botones en CTA (para index.html) */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los dos botones */
+    margin-top: 20px;
+}
+
+.btn-secondary-style {
+    /* Si quieres que el botón de registro sea diferente, aquí puedes usar un acento */
+    /* Por ejemplo, usar el rojo acento como fondo */
+    /* background-color: var(--color-acento); */
+    /* color: var(--blanco); */
+}
+
+/* Asegúrate de que esto esté en tu style.css */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los botones */
+    margin-top: 20px;
+}
+
+/* Estilo para el botón secundario "Volver" */
+.btn-secondary {
+    /* Color de fondo gris */
+    background-color: #A9A9A9; 
+    color: var(--blanco);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-left: 10px; /* Espacio entre botones */
+}
+
+.btn-secondary:hover {
+    background-color: #808080; /* Gris más oscuro al pasar el ratón */
+}
+
+/* ======================================= */
+/* ESTILOS DEL LISTADO (TABLA) */
+/* ======================================= */
+
+/* Encabezado del Listado (Título y Botón Agregar) */
+.listado-wrapper .container {
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.listado-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.listado-header h2 {
+    color: var(--azul-oscuro);
+    font-size: 2rem;
+}
+
+/* Botón "Agregar Alumno" (Estilo Outlined) */
+.btn-outline-primary {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    /* Borde con el azul principal */
+    border: 1px dashed var(--azul-principal); 
+    color: var(--azul-principal);
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--azul-principal);
+    color: var(--blanco);
+    border: 1px solid var(--azul-principal);
+}
+
+.btn-outline-primary .icon-plus {
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
+
+/* Estilo de la Tabla */
+.tabla-contenedor {
+    /* Fondo blanco y sombra para contener la tabla */
+    background-color: var(--blanco);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.tabla-listado {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.tabla-listado thead tr {
+    /* Color de encabezado de tabla */
+    background-color: var(--gris-claro); 
+    color: var(--azul-oscuro);
+    font-size: 0.9rem;
+}
+
+.tabla-listado th {
+    padding: 15px 10px;
+    font-weight: bold;
+}
+
+/* Estilo de las Filas (Alternancia y separación) */
+.tabla-listado tbody tr {
+    border-bottom: 1px solid #eee;
+}
+
+.tabla-listado tbody tr:last-child {
+    border-bottom: none;
+}
+
+.tabla-listado td {
+    padding: 15px 10px;
+    vertical-align: middle;
+    /* Texto del nombre en mayúsculas como en la imagen */
+    text-transform: uppercase; 
+    font-size: 0.95rem;
+}
+
+/* 3. Estilos de Botones de Acción de la Tabla */
+.btn-action {
+    padding: 6px 10px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    color: var(--blanco);
+    font-size: 0.75rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn-action:hover {
+    opacity: 0.85;
+}
+
+.delete-warning {
+    /* Usa el color rojo de acento de la paleta */
+    color: var(--rojo-alerta); 
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+/* Colores basados en la paleta: */
+
+/* Botón "Editar" (Similar al morado claro en la imagen) */
+.btn-edit {
+    background-color: #9955F2; 
+}
+
+/* Botón "Eliminar" (Similar al rojo/rojo vivo en la imagen) */
+.btn-delete {
+    background-color: var(--rojo-alerta); /* #F20505 */
+}
+
+/* Botón "Detalles" (Similar al azul claro/cyan en la imagen) */
+.btn-details {
+    background-color: #00ADB5; 
+}
+
+/* Botón "Grupo" (Similar al verde claro en la imagen) */
+.btn-group {
+    background-color: #8FD88F; 
+}
+
+/* Sobrescribe el estilo del botón principal para la acción de eliminar */
+.btn-delete-action {
+    background-color: var(--rojo-alerta); /* Rojo Vivo: #F20505 */
+}
+
+.btn-delete-action:hover {
+    background-color: #C00000; /* Un rojo más oscuro al hacer hover */
+}
+
+.image-preview-delete {
+    width: 100%;
+    max-width: 250px; /* Tamaño de la imagen de referencia */
+    height: auto;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.image-preview-delete img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+
+/* ======================================= */
+/* ESTILOS DE LA PANTALLA DE DETALLES */
+/* ======================================= */
+
+/* Estilo para el encabezado de la vista de detalles */
+.details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.details-header h2 {
+    color: var(--azul-oscuro);
+    font-size: 2rem;
+}
+
+/* Estilo para la Tarjeta Principal de Detalles */
+.details-card {
+    max-width: 900px;
+    width: 100%;
+    margin: 20px auto 60px auto;
+    background-color: var(--blanco);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Estilo para el Avatar/Iniciales (CR) */
+.avatar-cr {
+    width: 60px;
+    height: 60px;
+    background-color: var(--azul-principal); /* Azul principal para el fondo */
+    color: var(--blanco);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+/* Estilos de las secciones internas (Información Personal, Expediente) */
+.details-section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--gris-claro);
+}
+
+.details-section:last-child {
+    border-bottom: none;
+}
+
+.details-section h3 {
+    color: var(--azul-oscuro);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Estilo de la cuadrícula para la Información Personal */
+.details-grid {
+    display: grid;
+    /* Distribuye los campos en 3 columnas iguales */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px 30px;
+}
+
+.details-item label {
+    display: block;
+    color: var(--azul-oscuro);
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin-bottom: 2px;
+}
+
+.details-item p {
+    font-size: 1rem;
+    color: #444;
+    font-weight: normal;
+    /* Para que los nombres largos no rompan el layout */
+    word-wrap: break-word; 
+}
+
+
+/* Estilo de la cuadrícula para Expediente */
+.expediente-grid {
+    display: grid;
+    /* Distribuye los documentos en 4 columnas */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 15px 20px;
+}
+
+.expediente-item {
+    font-size: 0.9rem;
+    color: var(--azul-oscuro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.expediente-item label {
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+/* Estilos para el status SI/NO */
+.doc-status {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: var(--blanco);
+    font-size: 0.75rem;
+}
+
+.status-si {
+    background-color: #5cb85c; /* Verde para SÍ */
+}
+
+.status-no {
+    background-color: var(--rojo-alerta); /* Rojo Vivo para NO */
+}
+
+/* Estilo para el botón Volver */
+.btn-volver {
+    /* Mismo estilo que btn-secondary */
+    background-color: #A9A9A9; 
+    color: var(--blanco);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-volver:hover {
+    background-color: #808080; 
+}
+
+/* Responsive para cuadrículas */
+@media (max-width: 900px) {
+    .details-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .expediente-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .details-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+    .expediente-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ======================================= */
+/* ESTILOS ESPECÍFICOS DE PROGRESO (AJUSTE) */
+/* ======================================= */
+
+/* Mantenemos el estilo de la tarjeta general */
+.curso-card {
+    /* ... (resto de estilos de curso-card) ... */
+    border-left: 5px solid var(--azul-principal);
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    background-color: var(--gris-claro);
+    border-radius: 4px;
+    position: relative;
+    /* Usamos flex para centrar el título y el tag */
+    display: flex; 
+    flex-direction: column;
+}
+
+.curso-card h3 {
+    color: var(--azul-principal);
+    font-size: 1.2rem;
+    margin-bottom: 15px; /* Más espacio para separar del grid */
+}
+
+/* Contenedor principal de la información */
+.progreso-container {
+    display: flex; /* Usamos flexbox para dividir en dos grandes columnas (Taller y Docente) */
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Columna de Taller y Columna de Docente */
+.progreso-columna {
+    flex: 1; /* Ambas columnas ocupan el mismo espacio */
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Espacio vertical entre cada par de datos */
+}
+
+/* Estilo para cada par de datos (Etiqueta y Valor) */
+.progreso-item label {
+    font-weight: bold;
+    color: var(--azul-oscuro);
+    display: inline-block; /* Permite que el valor siga a la etiqueta */
+    width: 90px; /* Ancho fijo para alinear las etiquetas */
+    font-size: 0.95rem;
+}
+
+.progreso-item span {
+    font-weight: normal;
+    color: #444; /* Color de valor */
+}
+
+/* El resto de los estilos (.progreso-tag, .tag-egresado, etc.) se mantienen igual. */
+
+
+/* ======================================= */
+/* ESTILOS DE LA PÁGINA DE TALLERES        */
+/* ======================================= */
+
+.talleres-page-body {
+    background-color: var(--gris-claro);
+    min-height: 100vh;
+    padding-top: 20px;
+}
+
+.talleres-wrapper {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.talleres-wrapper h2 {
+    color: var(--azul-oscuro);
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+}
+
+.talleres-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    gap: 30px;
+}
+
+.taller-card {
+    background-color: var(--blanco);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.taller-card .image-container {
+    width: 100%;
+    height: 200px;
+    background-color: var(--gris-claro); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+}
+
+.taller-card .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.taller-card-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.taller-card-content h3 {
+    color: var(--azul-oscuro);
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.taller-card-content p {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.taller-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: var(--azul-oscuro);
+    margin-top: auto;
+}
+
+.taller-details span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.taller-details .price,
+.taller-details .duration {
+    color: var(--azul-principal);
+    font-weight: bold;
+}
+
+/* ======================================= */
+/* RESPONSIVE DESIGN (Ejemplos)           */
+/* ======================================= */
+
+@media (max-width: 1024px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    .activities-grid, .gallery-grid, .checkbox-group, .details-grid, .expediente-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+    .hero-content p, .cta p {
+        font-size: 1rem;
+    }
+    .activities-grid, .gallery-grid, .checkbox-group, .details-grid, .expediente-grid {
+        grid-template-columns: 1fr;
+    }
+    .cta-buttons .btn-primary {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .admin-header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .admin-header .nav {
+        margin-top: 15px;
+    }
+    .admin-header .nav a {
+        margin: 0 10px;
+    }
+    .form-container, .delete-student-wrapper, .progreso-section, .listado-wrapper .container {
+        padding: 20px;
+    }
+    .delete-student-wrapper {
+        margin: 20px auto;
+    }
+    .progreso-container {
+        flex-direction: column; /* Columnas de progreso una debajo de otra */
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    .btn-primary {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+    .form-container, .progreso-section {
+        padding: 15px;
+    }
+    .form-container h2, .progreso-section h2 {
+        font-size: 1.5rem;
+    }
+    .form-section h3 {
+        font-size: 1rem;
+    }
+}
+
+/* ======================================= */
+/* 3.6 ESTILOS DE PERFILES DE PROFESORES   */
+/* ======================================= */
+
+.perfiles-wrapper {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.perfiles-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.perfiles-header h2 {
+    color: var(--azul-oscuro);
+    font-size: 2.2rem;
+}
+
+.btn-add-profesor {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px dashed var(--azul-principal); 
+    color: var(--azul-principal);
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-add-profesor:hover {
+    background-color: var(--azul-principal);
+    color: var(--blanco);
+}
+
+.perfiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+}
+
+.profesor-card {
+    background-color: var(--blanco);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    position: relative;
+}
+
+.profile-avatar {
+    width: 70px;
+    height: 70px;
+    background-color: var(--azul-principal); 
+    color: var(--blanco);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0 auto 15px auto;
+}
+
+.card-id {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--gris-claro);
+    color: var(--azul-oscuro);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.username {
+    font-size: 1.3rem;
+    color: var(--azul-oscuro);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.info-block {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.info-block div {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.info-block label {
+    font-weight: bold;
+    color: var(--azul-oscuro);
+    display: inline-block;
+    width: 80px; 
+    margin-right: 5px;
+}
+
+.info-block span {
+    font-weight: normal;
+    color: #555;
+    display: inline-block;
+}
+
+.profile-actions {
+    position: absolute;
+    top: 75px;
+    right: 15px;
+    display: flex;
+    gap: 5px;
+}
+
+.btn-edit-prof {
+    background-color: #9955F2; /* Morado/Violeta */
+    padding: 5px 12px;
+    font-size: 0.8rem;
+}
+
+.btn-delete-prof {
+    background-color: var(--rojo-alerta);
+    padding: 5px 12px;
+    font-size: 0.8rem;
+}
+
+/* Ajustes Responsivos */
+@media (max-width: 768px) {
+    .perfiles-grid {
+        grid-template-columns: 1fr;
+    }
+}

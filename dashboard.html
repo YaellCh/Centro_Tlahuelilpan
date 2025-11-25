@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Centro Cultural Tlahuelilpan</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos del Dashboard */
+        .dashboard-wrapper {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .dashboard-wrapper h2 {
+            color: var(--azul-oscuro);
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+        }
+
+        .card-dashboard {
+            background-color: var(--blanco);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 220px;
+            position: relative;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .card-header h3 {
+            color: var(--azul-oscuro);
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .card-count {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--azul-principal);
+            line-height: 1;
+        }
+
+        .card-text {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        /* Estilos de Iconografía (Representados con SVG o IMG) */
+        .card-icon {
+            /* Aquí iría la imagen/SVG, usando la ruta local que definiste */
+            width: 70px;
+            height: 70px;
+            background-color: var(--gris-claro); /* Fondo de placeholder */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem; /* Usamos una letra o ícono simple */
+            color: var(--azul-principal);
+        }
+
+        /* Contenedor de Botones de Acción */
+        .card-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        /* Botón de Enlace (Azul) */
+        .btn-link-blue {
+            color: var(--azul-principal);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        
+        .btn-link-blue:hover {
+            color: var(--azul-secundario);
+        }
+
+        /* Botón de Acción Principal (Verde para Agregar/Inscribir) */
+        .btn-action-green {
+            background-color: #5cb85c; /* Verde estándar para acciones positivas */
+            color: var(--blanco);
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        .btn-action-green:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body class="form-page-body">
+
+    <header class="admin-header">
+        <div class="container">
+            <div>
+                <strong>Centro Cultural Regional Tlahuelilpan</strong> 
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="#" class="nav-link">Personal Administrativo</a>
+                <a href="#" class="nav-link btn-session">Iniciar sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="dashboard-wrapper">
+        <h2>Dashboard de Gestión Educativa</h2>
+
+        <div class="dashboard-grid">
+            
+            <div class="card-dashboard">
+                <div class="card-header">
+                    <div>
+                        <h3>Talleres</h3>
+                        <div class="card-count">9</div>
+                    </div>
+                    <div class="card-icon">🎻</div> 
+                </div>
+                
+                <div class="card-text">Total de talleres disponibles en el sistema</div>
+                
+                <div class="card-actions">
+                    <a href="nuestros_talleres.html" class="btn-link-blue">Ver todos los talleres</a>
+                    <a href="agregar_taller.html" class="btn-action-green">Agregar Taller</a>
+                </div>
+            </div>
+
+            <div class="card-dashboard">
+                <div class="card-header">
+                    <div>
+                        <h3>Docentes</h3>
+                        <div class="card-count">6</div>
+                    </div>
+                    <div class="card-icon">👨‍🏫</div> 
+                </div>
+                
+                <div class="card-text">Docentes activos en el sistema educativo</div>
+                
+                <div class="card-actions">
+                    <a href="#" class="btn-link-blue">Ver lista de Profesores</a>
+                    <a href="agregar_profesor.html" class="btn-action-green">Agregar Profesor</a>
+                </div>
+            </div>
+            
+            <div class="card-dashboard">
+                <div class="card-header">
+                    <div>
+                        <h3>Grupos</h3>
+                        <div class="card-count">9</div>
+                    </div>
+                    <div class="card-icon">👥</div> 
+                </div>
+                
+                <div class="card-text">Grupos activos en el sistema educativo</div>
+                
+                <div class="card-actions">
+                    <a href="#" class="btn-link-blue">Ver todos los grupos</a>
+                    <a href="agregar_grupo.html" class="btn-action-green">Agregar Grupo</a>
+                </div>
+            </div>
+            
+            <div class="card-dashboard">
+                <div class="card-header">
+                    <div>
+                        <h3>Alumnos</h3>
+                        <div class="card-count">13</div>
+                    </div>
+                    <div class="card-icon">🎓</div> 
+                </div>
+                
+                <div class="card-text">Estudiantes registrados en el sistema</div>
+                
+                <div class="card-actions">
+                    <a href="listado_alumnos.html" class="btn-link-blue">Ver todos los estudiantes</a>
+                    <a href="agregar_alumno.html" class="btn-action-green">Inscribir Alumno</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

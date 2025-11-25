@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Profesor - Centro Cultural Tlahuelilpan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="form-page-body">
+
+    <header class="admin-header">
+        <div class="container">
+            <div>
+                <strong>Centro Cultural Regional Tlahuelilpan</strong> 
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="#" class="nav-link">Personal Administrativo</a>
+                <a href="#" class="nav-link btn-session">Iniciar sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="form-wrapper">
+        <form class="form-container form-delete">
+            
+            <h2 class="delete-warning">¿Eliminar Profesor?</h2>
+
+            <div class="form-section">
+                <h3>Información del Docente</h3>
+                
+                <div class="input-group">
+                    <label for="nombre_completo">Nombre Completo</label>
+                    <input type="text" id="nombre_completo" name="nombre_completo" class="form-input" value="Admin Sistema" readonly>
+                </div>
+                
+                <div class="input-group">
+                    <label for="localidad">Localidad</label>
+                    <input type="text" id="localidad" name="localidad" class="form-input" value="" readonly>
+                </div>
+                
+                <div class="input-group">
+                    <label for="contacto">Contacto</label>
+                    <input type="tel" id="contacto" name="contacto" class="form-input" value="5551234567" readonly>
+                </div>
+                
+            </div>
+
+            <div class="form-section">
+                <h3>Información de Usuario</h3>
+                
+                <div class="input-group">
+                    <label for="nombre_usuario">Nombre de Usuario</label>
+                    <input type="text" id="nombre_usuario" name="nombre_usuario" class="form-input" value="admin" readonly>
+                </div>
+                
+                <div class="input-group">
+                    <label for="rol">Rol</label>
+                    <input type="text" id="rol" name="rol" class="form-input" value="" readonly>
+                </div>
+                
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-submit btn-delete-action">Eliminar</button>
+                
+                <button type="button" class="btn-secondary" onclick="history.back()">Cancelar</button>
+            </div>
+
+        </form>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Alumno - Centro Cultural Tlahuelilpan</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Contenedor central más pequeño para la tarjeta de advertencia */
+        .delete-student-wrapper {
+            max-width: 450px;
+            margin: 40px auto;
+            background-color: var(--blanco);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Estilos del encabezado de advertencia (rojo) */
+        .delete-student-wrapper h2 {
+            color: var(--rojo-alerta); 
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+        }
+
+        /* Estilo del Avatar (CR) */
+        .avatar-cr {
+            width: 80px;
+            height: 80px;
+            background-color: var(--azul-principal); 
+            color: var(--blanco);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 0 auto 15px auto;
+        }
+
+        /* Información resumida del alumno */
+        .summary-info {
+            margin-bottom: 25px;
+        }
+
+        .summary-info p {
+            font-size: 1rem;
+            color: var(--azul-oscuro);
+            margin: 5px 0;
+            font-weight: bold;
+        }
+
+        .summary-info small {
+            display: block;
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        /* Caja de advertencia (amarillo claro) */
+        .warning-box {
+            background-color: #FFFBE5; /* Amarillo muy claro */
+            border: 1px solid #FFE58F; /* Borde amarillo suave */
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 4px;
+            color: var(--azul-oscuro);
+            font-size: 0.9rem;
+        }
+
+        /* Botones de acción (Alineación central) */
+        .delete-actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        /* Estilo del botón de confirmación (rojo) */
+        .btn-confirm-delete {
+            background-color: var(--rojo-alerta); 
+            color: var(--blanco);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn-confirm-delete:hover {
+            background-color: var(--color-acento); /* Rojo Tierra para hover */
+        }
+        
+        /* Botón Cancelar (Gris/Secundario) */
+        .btn-cancel {
+            background-color: #A9A9A9; 
+            color: var(--blanco);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn-cancel:hover {
+            background-color: #808080; 
+        }
+    </style>
+</head>
+<body class="form-page-body">
+
+    <header class="admin-header">
+        <div class="container">
+            <div>
+                <strong>Centro Cultural Regional Tlahuelilpan</strong> 
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="#" class="nav-link">Personal Administrativo</a>
+                <a href="#" class="nav-link btn-session">Iniciar sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="form-wrapper">
+        <div class="delete-student-wrapper">
+            
+            <h2>¿Eliminar Alumno?</h2>
+
+            <div class="avatar-cr">CR</div> 
+
+            <div class="summary-info">
+                <p>CAROLINE SAMANTHA ROMERO GONZÁLEZ</p>
+                <small>ID: 1 | Edad: 4 años</small>
+            </div>
+
+            <div class="warning-box">
+                Esta acción eliminará permanentemente al alumno y todos sus registros asociados.
+            </div>
+
+            <div class="delete-actions">
+                <button type="submit" class="btn-confirm-delete">Confirmar Eliminación</button>
+                <button type="button" class="btn-cancel" onclick="history.back()">Cancelar</button>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

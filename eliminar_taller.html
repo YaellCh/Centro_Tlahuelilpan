@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Taller - Centro Cultural Tlahuelilpan</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body class="form-page-body">
+
+    <header class="admin-header">
+        <div class="container">
+            <div>
+                <strong>Centro Cultural Regional Tlahuelilpan</strong> 
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="#" class="nav-link">Personal Administrativo</a>
+                <a href="#" class="nav-link btn-session">Iniciar sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="form-wrapper">
+        <form class="form-container form-delete">
+            
+            <h2 class="delete-warning">¿Eliminar el taller?</h2>
+
+            <div class="form-section">
+                
+                <div class="input-group">
+                    <label for="nombre_taller">Nombre del Taller</label>
+                    <input type="text" id="nombre_taller" name="nombre_taller" class="form-input" value="BALLET" readonly>
+                </div>
+                
+                <div class="input-group">
+                    <label for="descripcion">Descripción</label>
+                    <textarea id="descripcion" name="descripcion" class="form-input" rows="3" readonly>Taller de danza clásica para niños y jóvenes</textarea>
+                </div>
+                
+                <div class="input-group">
+                    <label for="precio">Precio ($)</label>
+                    <input type="text" id="precio" name="precio" class="form-input" value="200.00" readonly>
+                </div>
+                
+                <div class="input-group">
+                    <label for="duracion">Duración</label>
+                    <input type="text" id="duracion" name="duracion" class="form-input" value="Semestral" readonly>
+                </div>
+
+                <div class="input-group">
+                    <label for="imagen">Imagen del Taller</label>
+                    <div class="image-preview-delete">
+                        <img src="/imgs/ballet.jpg" alt="Imagen del Taller de Ballet">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-submit btn-delete-action">Eliminar</button>
+                
+                <button type="button" class="btn-secondary" onclick="history.back()">Volver</button>
+            </div>
+
+        </form>
+    </main>
+
+</body>
+</html>

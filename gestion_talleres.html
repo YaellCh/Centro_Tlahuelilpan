@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Talleres - Centro Cultural Tlahuelilpan</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para esta vista (reutilizando y añadiendo acciones) */
+        .talleres-page-body {
+            background-color: var(--gris-claro);
+            min-height: 100vh;
+            padding-top: 20px;
+        }
+
+        .talleres-wrapper {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .talleres-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .talleres-header h2 {
+            color: var(--azul-oscuro);
+            font-size: 2.2rem;
+        }
+
+        .talleres-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .taller-card {
+            background-color: var(--blanco);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            position: relative; /* Necesario para posicionar las acciones */
+        }
+
+        /* Contenedor de Emojis/Imágenes */
+        .taller-card .image-container {
+            width: 100%;
+            height: 200px;
+            background-color: var(--gris-claro); 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem; /* Tamaño grande para el emoji */
+            overflow: hidden;
+            border-bottom: 1px solid #eee;
+        }
+
+        .taller-card-content {
+            padding: 20px;
+        }
+
+        .taller-card-content h3 {
+            color: var(--azul-oscuro);
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .taller-card-content p {
+            color: #555;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .taller-details {
+            display: flex;
+            gap: 20px;
+            font-size: 0.9rem;
+            color: var(--azul-oscuro);
+        }
+
+        .taller-details span {
+            font-weight: bold;
+            color: var(--azul-oscuro);
+        }
+
+        /* Botones de Acción (Editar/Eliminar) */
+        .card-actions-overlay {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 5px;
+        }
+        
+        .btn-edit-card, .btn-delete-card {
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: var(--blanco);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .btn-edit-card {
+            background-color: #9955F2; /* Morado/Violeta */
+        }
+        
+        .btn-delete-card {
+            background-color: var(--rojo-alerta); /* Rojo Vivo */
+        }
+        
+        .btn-edit-card:hover, .btn-delete-card:hover {
+            opacity: 0.8;
+        }
+        
+        /* Botón de Agregar Taller (Reutiliza btn-outline-primary de style.css) */
+        .btn-add-taller {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px dashed var(--azul-principal); 
+            color: var(--azul-principal);
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.2s ease-in-out;
+        }
+
+    </style>
+</head>
+<body class="talleres-page-body">
+
+    <header class="admin-header">
+        <div class="container">
+            <div>
+                <strong>Centro Cultural Regional Tlahuelilpan</strong> 
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="#" class="nav-link">Personal Administrativo</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="talleres-wrapper">
+        
+        <div class="talleres-header">
+            <h2>Nuestros Talleres</h2>
+            <a href="crear_taller.html" class="btn-add-taller">
+                + Agregar Taller
+            </a>
+        </div>
+
+        <div class="talleres-grid">
+            
+            <div class="taller-card">
+                <div class="image-container">
+                    🩰
+                </div>
+                <div class="card-actions-overlay">
+                    <a href="editar_taller.html" class="btn-edit-card">Editar</a>
+                    <a href="eliminar_taller.html" class="btn-delete-card">Eliminar</a>
+                </div>
+                <div class="taller-card-content">
+                    <h3>BALLET</h3>
+                    <p>Taller de danza clásica para niños y jóvenes</p>
+                    <div class="taller-details">
+                        <span class="price">Precio: $200.00</span>
+                        <span class="duration">Duración: Semestral</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="taller-card">
+                <div class="image-container">
+                    🎨
+                </div>
+                <div class="card-actions-overlay">
+                    <a href="editar_taller.html" class="btn-edit-card">Editar</a>
+                    <a href="eliminar_taller.html" class="btn-delete-card">Eliminar</a>
+                </div>
+                <div class="taller-card-content">
+                    <h3>EXPLORACIÓN ARTÍSTICA</h3>
+                    <p>Taller multidisciplinario de artes</p>
+                    <div class="taller-details">
+                        <span class="price">Precio: $200.00</span>
+                        <span class="duration">Duración: Semestral</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="taller-card">
+                <div class="image-container">
+                    🥁
+                </div>
+                <div class="card-actions-overlay">
+                    <a href="editar_taller.html" class="btn-edit-card">Editar</a>
+                    <a href="eliminar_taller.html" class="btn-delete-card">Eliminar</a>
+                </div>
+                <div class="taller-card-content">
+                    <h3>PERCUSIONES SINFÓNICAS</h3>
+                    <p>Taller de instrumentos de percusión</p>
+                    <div class="taller-details">
+                        <span class="price">Precio: $200.00</span>
+                        <span class="duration">Duración: Anual</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="taller-card">
+                <div class="image-container">
+                    🎸
+                </div>
+                <div class="card-actions-overlay">
+                    <a href="editar_taller.html" class="btn-edit-card">Editar</a>
+                    <a href="eliminar_taller.html" class="btn-delete-card">Eliminar</a>
+                </div>
+                <div class="taller-card-content">
+                    <h3>GUITARRA</h3>
+                    <p>Taller de guitarra para niños y jóvenes</p>
+                    <div class="taller-details">
+                        <span class="price">Precio: $200.00</span>
+                        <span class="duration">Duración: Semestral</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+</body>
+</html>

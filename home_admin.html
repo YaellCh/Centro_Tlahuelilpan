@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido - Centro Cultural Regional Tlahuelilpan</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para la sección de bienvenida */
+        .welcome-hero {
+            max-width: 1200px;
+            margin: 40px auto 20px auto;
+            padding: 40px;
+            /* Degradado de fondo con colores muy suaves */
+            background: linear-gradient(135deg, rgba(4, 85, 191, 0.08) 0%, rgba(255, 255, 255, 0.9) 100%);
+            border-radius: 8px;
+            border: 1px solid rgba(4, 85, 191, 0.1);
+            text-align: center;
+        }
+
+        .welcome-hero h2 {
+            font-size: 2.5rem;
+            color: var(--azul-oscuro);
+            margin-bottom: 10px;
+        }
+
+        .welcome-hero p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Estilos para las tarjetas de información */
+        .info-card {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: var(--blanco);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .info-card h3 {
+            color: var(--azul-oscuro);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--gris-claro);
+            padding-bottom: 10px;
+        }
+
+        .info-card p {
+            font-size: 1.05rem;
+            color: #444;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .info-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .info-list li {
+            background-color: var(--gris-claro);
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            font-size: 1rem;
+            border-left: 3px solid var(--azul-principal);
+        }
+
+        .info-list strong {
+            color: var(--azul-principal);
+        }
+        
+        .section-separator {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body class="form-page-body">
+
+    <header class="admin-header">
+        <div class="container">
+            <div>
+                <strong>Centro Cultural Regional Tlahuelilpan</strong> 
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="#" class="nav-link">Personal Administrativo</a>
+                <a href="iniciar_sesion.html" class="nav-link btn-session">Iniciar sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="welcome-hero">
+            <h2>¡Bienvenidos al Centro Cultural Regional Tlahuelilpan!</h2>
+            <p>Espacio dedicado al arte, la educación y la cultura. Este panel le permite gestionar integralmente los recursos del centro.</p>
+        </div>
+
+        <div class="info-card">
+
+            <h3>Instalaciones</h3>
+            <p>El Centro Cultural Regional Tlahuelilpan está diseñado para ofrecer un entorno óptimo para el desarrollo artístico y educativo de nuestra comunidad.</p>
+            <p>Nuestras instalaciones incluyen:</p>
+            <ul class="info-list">
+                <li><strong>Salones Multifuncionales:</strong> Espacios especializados para danza, música, artes plásticas y artes escénicas. Todos equipados con ventilación adecuada y acústica controlada.</li>
+                <li><strong>Área de Exposiciones:</strong> Un espacio con iluminación especial y paneles modulares, ideal para albergar obras de arte local y exposiciones temporales de gran formato.</li>
+                <li><strong>Biblioteca y Lectura Informal:</strong> Un área tranquila destinada al estudio, la investigación y la promoción de la lectura, con acceso a recursos digitales y físicos.</li>
+                <li><strong>Accesibilidad Universal:</strong> Contamos con rampas y un elevador para garantizar el acceso total a todas las áreas del centro a personas con discapacidad.</li>
+            </ul>
+
+            <h3 class="section-separator">Gestión de Actividades</h3>
+            <p>El sistema administrativo facilita el control de nuestros programas. Aquí se detallan las principales áreas de gestión y los archivos clave para cada una:</p>
+
+            <ul class="info-list">
+                <li><strong>Talleres y Cursos:</strong> Administre los detalles de cada taller, incluyendo precios, duración, e imágenes promocionales. (Archivos clave: **`crear_taller.html`**, **`editar_taller.html`**, **`eliminar_taller.html`**)</li>
+                <li><strong>Personal Docente:</strong> Gestione los perfiles de los instructores, sus datos de contacto y la información de acceso al sistema. (Archivos clave: **`agregar_profesor.html`**, **`perfiles_profesores.html`**)</li>
+                <li><strong>Alumnos:</strong> Realice inscripciones, edite información personal y revise el estatus de la documentación de cada estudiante. (Archivos clave: **`agregar_alumno.html`**, **`listado_alumnos.html`**, **`detalles_alumno.html`**)</li>
+                <li><strong>Grupos y Progreso:</strong> Asigne alumnos a grupos específicos y monitoree el rendimiento académico y de asistencia. (Archivos clave: **`agregar_grupo.html`**, **`gestion_alumno.html`**)</li>
+            </ul>
+
+            <h3 class="section-separator">Misión del Centro</h3>
+            <p>Ser el motor cultural de la región, fomentando la identidad local y ofreciendo oportunidades de desarrollo artístico y educativo de alta calidad para todas las edades y sectores de la población de Tlahuelilpan.</p>
+        </div>
+    </main>
+</body>
+</html>

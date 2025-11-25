@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Alumno - Centro Cultural Tlahuelilpan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="form-page-body">
+
+    <header class="admin-header">
+        <div class="container">
+            <div>
+                <strong>Centro Cultural Regional Tlahuelilpan</strong> 
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="#" class="nav-link">Personal Administrativo</a>
+                <a href="#" class="nav-link btn-session">Iniciar sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="form-wrapper">
+        <form class="form-container">
+            
+            <h2>Editar Alumno</h2>
+
+            <div class="form-section">
+                <h3>Documentación del Expediente</h3>
+                <div class="checkbox-group">
+                    <div class="input-group-checkbox">
+                        <input type="checkbox" id="acta" name="documentacion" value="acta" checked> 
+                        <label for="acta">Acta de Nacimiento</label>
+                    </div>
+                    <div class="input-group-checkbox">
+                        <input type="checkbox" id="curp" name="documentacion" value="curp" checked>
+                        <label for="curp">CURP</label>
+                    </div>
+                    <div class="input-group-checkbox">
+                        <input type="checkbox" id="comprobante" name="documentacion" value="comprobante" checked>
+                        <label for="comprobante">Comprobante Domicilio</label>
+                    </div>
+                    <div class="input-group-checkbox">
+                        <input type="checkbox" id="ine" name="documentacion" value="ine">
+                        <label for="ine">INE</label>
+                    </div>
+                    <div class="input-group-checkbox">
+                        <input type="checkbox" id="certificado" name="documentacion" value="certificado" checked>
+                        <label for="certificado">Certificado Médico</label>
+                    </div>
+                    <div class="input-group-checkbox">
+                        <input type="checkbox" id="recibo" name="documentacion" value="recibo" checked>
+                        <label for="recibo">Recibo de Pago</label>
+                    </div>
+                    <div class="input-group-checkbox">
+                        <input type="checkbox" id="fotografias" name="documentacion" value="fotografias">
+                        <label for="fotografias">Fotografías</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Datos Personales</h3>
+                <div class="input-group">
+                    <label for="nombre">Nombre(s)</label>
+                    <input type="text" id="nombre" name="nombre" class="form-input" value="CAROLINE SAMANTHA">
+                </div>
+                <div class="input-group">
+                    <label for="a_paterno">Apellido Paterno</label>
+                    <input type="text" id="a_paterno" name="a_paterno" class="form-input" value="ROMERO">
+                </div>
+                <div class="input-group">
+                    <label for="a_materno">Apellido Materno</label>
+                    <input type="text" id="a_materno" name="a_materno" class="form-input" value="GONZÁLEZ">
+                </div>
+                <div class="input-group">
+                    <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+                    <input type="text" id="fecha_nacimiento" name="fecha_nacimiento" class="form-input" value="15/03/2021">
+                </div>
+                <div class="input-group">
+                    <label for="localidad">Localidad</label>
+                    <input type="text" id="localidad" name="localidad" class="form-input" value="COL. CUAUHTEMOC">
+                </div>
+                
+                <div class="input-group">
+                    <label for="contacto">Número de Contacto</label>
+                    <input type="tel" id="contacto" name="contacto" class="form-input" value="7712345678">
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-input" value="ana.martinez@ccrt.com">
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h3>Información de Usuario</h3>
+                
+                <div class="input-group">
+                    <label for="nombre_usuario">Nombre de Usuario</label>
+                    <input type="text" id="nombre_usuario" name="nombre_usuario" class="form-input" value="amartinez">
+                </div>
+                
+                <div class="input-group">
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" id="contrasena" name="contrasena" class="form-input">
+                </div>
+                
+                <div class="input-group">
+                    <label for="confirmar_contrasena">Confirmar Contraseña</label>
+                    <input type="password" id="confirmar_contrasena" name="confirmar_contrasena" class="form-input">
+                </div>
+                
+                <div class="input-group">
+                    <label for="rol">Rol</label>
+                    <select id="rol" name="rol" class="form-input" value="Alumno">
+                        <option value="Alumno" selected>Alumno</option>
+                        <option value="Docente">Docente</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn-submit">Actualizar</button>
+                
+                <button type="button" class="btn-secondary" onclick="history.back()">Volver</button>
+            </div>
+
+        </form>
+    </main>
+
+</body>
+</html>

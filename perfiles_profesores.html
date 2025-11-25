@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfiles de Profesores - Centro Cultural Tlahuelilpan</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para la vista de Perfiles */
+        .perfiles-wrapper {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .perfiles-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .perfiles-header h2 {
+            color: var(--azul-oscuro);
+            font-size: 2.2rem;
+        }
+
+        /* Botón de Agregar Profesor (Reutiliza btn-outline-primary de listado) */
+        .btn-add-profesor {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px dashed var(--azul-principal); 
+            color: var(--azul-principal);
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.2s ease-in-out;
+        }
+        
+        .btn-add-profesor:hover {
+            background-color: var(--azul-principal);
+            color: var(--blanco);
+        }
+
+        .perfiles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px;
+        }
+
+        .profesor-card {
+            background-color: var(--blanco);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            position: relative;
+        }
+        
+        /* Avatar del Perfil (Círculo) */
+        .profile-avatar {
+            width: 70px;
+            height: 70px;
+            background-color: var(--azul-principal); 
+            color: var(--blanco);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 0 auto 15px auto;
+        }
+        
+        /* ID flotante en la esquina */
+        .card-id {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: var(--gris-claro);
+            color: var(--azul-oscuro);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        /* Nombre de usuario principal */
+        .username {
+            font-size: 1.3rem;
+            color: var(--azul-oscuro);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        /* Bloque de Información */
+        .info-block {
+            text-align: left;
+            margin-top: 10px;
+        }
+        
+        .info-block div {
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        .info-block label {
+            font-weight: bold;
+            color: var(--azul-oscuro);
+            display: inline-block;
+            width: 80px; /* Ancho fijo para alinear dos puntos */
+            margin-right: 5px;
+        }
+        
+        .info-block span {
+            font-weight: normal;
+            color: #555;
+            display: inline-block;
+        }
+
+        /* Botones de Acción sobre la imagen/avatar */
+        .profile-actions {
+            position: absolute;
+            top: 75px;
+            right: 15px;
+            display: flex;
+            gap: 5px;
+        }
+        
+        /* Reutilizamos btn-action (rojo y morado) */
+        .btn-edit-prof {
+            background-color: #9955F2; /* Morado/Violeta */
+            padding: 5px 12px;
+            font-size: 0.8rem;
+        }
+
+        .btn-delete-prof {
+            background-color: var(--rojo-alerta);
+            padding: 5px 12px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body class="form-page-body">
+
+    <header class="admin-header">
+        <div class="container">
+            <div>
+                <strong>Centro Cultural Regional Tlahuelilpan</strong> 
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="#" class="nav-link">Personal Administrativo</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="perfiles-wrapper">
+        
+        <div class="perfiles-header">
+            <h2>Perfiles de Profesores</h2>
+            <a href="agregar_profesor.html" class="btn-add-profesor">
+                + Agregar Profesor
+            </a>
+        </div>
+
+        <div class="perfiles-grid">
+            
+            <div class="profesor-card">
+                <div class="card-id">1</div>
+                <div class="profile-avatar">CR</div>
+                <div class="profile-actions">
+                    <a href="editar_profesor.html" class="btn-action btn-edit-prof">Editar</a>
+                    <a href="eliminar_profesor.html" class="btn-action btn-delete-prof">Eliminar</a>
+                </div>
+                
+                <h3 class="username">admin</h3>
+                
+                <div class="info-block">
+                    <div><label>Nombre:</label> <span>Admin Sistema</span></div>
+                    <div><label>Localidad:</label> <span></span></div>
+                    <div><label>Teléfono:</label> <span>5551234567</span></div>
+                    <div><label>Email:</label> <span></span></div>
+                    <div><label>Rol:</label> <span>Administrador</span></div>
+                    <div><label>Contraseña:</label> <span>BCK97E58541041598D8D4DE15D8167AB6</span></div>
+                </div>
+            </div>
+
+            <div class="profesor-card">
+                <div class="card-id">2</div>
+                <div class="profile-avatar">AM</div>
+                <div class="profile-actions">
+                    <a href="editar_profesor.html" class="btn-action btn-edit-prof">Editar</a>
+                    <a href="eliminar_profesor.html" class="btn-action btn-delete-prof">Eliminar</a>
+                </div>
+                
+                <h3 class="username">amartinez</h3>
+                
+                <div class="info-block">
+                    <div><label>Nombre:</label> <span>ANA PATRICIA MARTINEZ LOPEZ</span></div>
+                    <div><label>Localidad:</label> <span>TULA</span></div>
+                    <div><label>Teléfono:</label> <span>7712345678</span></div>
+                    <div><label>Email:</label> <span>ana.martinez@ccrt.com</span></div>
+                    <div><label>Rol:</label> <span>Docente</span></div>
+                    <div><label>Contraseña:</label> <span>********</span></div>
+                </div>
+            </div>
+
+            <div class="profesor-card">
+                <div class="card-id">3</div>
+                <div class="profile-avatar">PH</div>
+                <div class="profile-actions">
+                    <a href="editar_profesor.html" class="btn-action btn-edit-prof">Editar</a>
+                    <a href="eliminar_profesor.html" class="btn-action btn-delete-prof">Eliminar</a>
+                </div>
+                
+                <h3 class="username">pherna</h3>
+                
+                <div class="info-block">
+                    <div><label>Nombre:</label> <span>PAULINA HERNÁNDEZ GUTIÉRREZ</span></div>
+                    <div><label>Localidad:</label> <span>CHILCUAUTLA</span></div>
+                    <div><label>Teléfono:</label> <span>552515982</span></div>
+                    <div><label>Email:</label> <span>paulina.hernandez@ccrt.com</span></div>
+                    <div><label>Rol:</label> <span>Docente</span></div>
+                    <div><label>Contraseña:</label> <span>********</span></div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+</body>
+</html>

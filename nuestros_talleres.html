@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Talleres - Centro Cultural Tlahuelilpan</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para la página de talleres */
+        .talleres-page-body {
+            background-color: var(--gris-claro);
+            min-height: 100vh;
+            padding-top: 20px;
+        }
+
+        .talleres-wrapper {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .talleres-wrapper h2 {
+            color: var(--azul-oscuro);
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+        }
+
+        .talleres-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adaptativo */
+            gap: 30px;
+        }
+
+        .taller-card {
+            background-color: var(--blanco);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            display: flex; /* Para organizar imagen y contenido */
+            flex-direction: column;
+        }
+
+        .taller-card .image-container {
+            width: 100%;
+            height: 200px;
+            background-color: var(--gris-claro); /* Placeholder */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-bottom: 1px solid #eee;
+        }
+        
+        /* Estilo para las imágenes reales dentro del contenedor */
+        .taller-card .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+        }
+
+        .taller-card-content {
+            padding: 20px;
+            flex-grow: 1; /* Ocupa el espacio restante */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .taller-card-content h3 {
+            color: var(--azul-oscuro);
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .taller-card-content p {
+            color: #555;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            flex-grow: 1; /* Para que la descripción ocupe espacio antes de los detalles */
+        }
+
+        .taller-details {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: var(--azul-oscuro);
+            margin-top: auto; /* Empuja los detalles al final de la tarjeta */
+        }
+
+        .taller-details span {
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        .taller-details .price,
+        .taller-details .duration {
+            color: var(--azul-principal);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="talleres-page-body">
+
+    <header class="admin-header">
+        <div class="container">
+            <div>
+                <strong>Centro Cultural Regional Tlahuelilpan</strong> 
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="#" class="nav-link">Personal Administrativo</a>
+                <a href="#" class="nav-link btn-session">Iniciar sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="talleres-wrapper">
+        <h2>Nuestros Talleres</h2>
+
+        <div class="talleres-grid">
+            
+            <div class="taller-card">
+                <div class="image-container">
+                    <img src="./imgs/ballet.jpg" alt="Ballet">
+                </div>
+                <div class="taller-card-content">
+                    <h3>BALLET</h3>
+                    <p>Taller de danza clásica para niños y jóvenes</p>
+                    <div class="taller-details">
+                        <div><span>Precio:</span> <span class="price">$200.00</span></div>
+                        <div><span>Duración:</span> <span class="duration">Semestral</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="taller-card">
+                <div class="image-container">
+                    <img src="./imgs/exploracion.jpg" alt="Exploración Artística">
+                </div>
+                <div class="taller-card-content">
+                    <h3>EXPLORACIÓN ARTÍSTICA</h3>
+                    <p>Taller multidisciplinario de artes</p>
+                    <div class="taller-details">
+                        <div><span>Precio:</span> <span class="price">$200.00</span></div>
+                        <div><span>Duración:</span> <span class="duration">Semestral</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="taller-card">
+                <div class="image-container">
+                    <img src="./imgs/percuciones.jpg" alt="Percusiones Sinfónicas">
+                </div>
+                <div class="taller-card-content">
+                    <h3>PERCUSIONES SINFÓNICAS</h3>
+                    <p>Taller de instrumentos de percusión</p>
+                    <div class="taller-details">
+                        <div><span>Precio:</span> <span class="price">$200.00</span></div>
+                        <div><span>Duración:</span> <span class="duration">Anual</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="taller-card">
+                <div class="image-container">
+                    <img src="./imgs/nata.jpg" alt="Guitarra">
+                </div>
+                <div class="taller-card-content">
+                    <h3>GUITARRA</h3>
+                    <p>Taller de guitarra para niños y jóvenes</p>
+                    <div class="taller-details">
+                        <div><span>Precio:</span> <span class="price">$200.00</span></div>
+                        <div><span>Duración:</span> <span class="duration">Semestral</span></div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+    </main>
+
+</body>
+</html>

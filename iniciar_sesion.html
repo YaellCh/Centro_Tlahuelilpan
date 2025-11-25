@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Centro Cultural Tlahuelilpan</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .login-wrapper {
+            /* Mantiene el body en gris claro */
+            background-color: var(--gris-claro); 
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .login-card {
+            max-width: 400px; /* Tarjeta más pequeña para el login */
+            width: 100%;
+            background-color: var(--blanco);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .login-card h2 {
+            color: var(--azul-oscuro);
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        /* Reutiliza .input-group y .form-input de style.css */
+        
+        .btn-login {
+            /* Botón principal azul brillante */
+            background-color: var(--azul-principal); 
+            color: var(--blanco);
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn-login:hover {
+            background-color: var(--azul-secundario);
+        }
+    </style>
+</head>
+<body class="login-wrapper">
+
+    <main class="login-card">
+        
+        <h2 class="login-title">Iniciar Sesión</h2>
+
+        <form>
+            <div class="input-group">
+                <label for="username">Nombre de Usuario</label>
+                <input type="text" id="username" name="username" class="form-input" value="admin">
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" class="form-input" value="*****">
+            </div>
+            
+            <div class="input-group">
+                <label for="rol">Rol</label>
+                <input type="text" id="rol" name="rol" class="form-input" value="Administrador">
+            </div>
+            
+            <button type="submit" class="btn-login">Entrar</button>
+        </form>
+
+    </main>
+
+</body>
+</html>

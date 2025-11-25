@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Alumno - Centro Cultural Tlahuelilpan</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body class="form-page-body">
+
+    <header class="admin-header">
+        <div class="container">
+            <div>
+                <strong>Centro Cultural Regional Tlahuelilpan</strong> 
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="#" class="nav-link">Personal Administrativo</a>
+                <a href="#" class="nav-link btn-session">Iniciar sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="form-wrapper">
+        <form class="form-container">
+            
+            <h2>Agregar Alumno</h2>
+
+            <div class="form-section">
+                <h3>Documentación del Expediente</h3>
+                <div class="checkbox-group">
+                    <div class="input-group-checkbox">
+                        <input type="checkbox" id="acta" name="documentacion" value="acta">
+                        <label for="acta">Acta de Nacimiento</label>
+                    </div>
+                    <div class="input-group-checkbox">
+                        <input type="checkbox" id="curp" name="documentacion" value="curp">
+                        <label for="curp">CURP</label>
+                    </div>
+                    <div class="input-group-checkbox">
+                        <input type="checkbox" id="comprobante" name="documentacion" value="comprobante">
+                        <label for="comprobante">Comprobante Domicilio</label>
+                    </div>
+                    <div class="input-group-checkbox">
+                        <input type="checkbox" id="ine" name="documentacion" value="ine">
+                        <label for="ine">INE</label>
+                    </div>
+                    <div class="input-group-checkbox">
+                        <input type="checkbox" id="certificado" name="documentacion" value="certificado">
+                        <label for="certificado">Certificado Médico</label>
+                    </div>
+                    <div class="input-group-checkbox">
+                        <input type="checkbox" id="recibo" name="documentacion" value="recibo">
+                        <label for="recibo">Recibo de Pago</label>
+                    </div>
+                    <div class="input-group-checkbox">
+                        <input type="checkbox" id="fotografias" name="documentacion" value="fotografias">
+                        <label for="fotografias">Fotografías</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Datos Personales</h3>
+                <div class="input-group">
+                    <label for="nombre">Nombre(s)</label>
+                    <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Nombre(s)">
+                </div>
+                <div class="input-group">
+                    <label for="a_paterno">Apellido Paterno</label>
+                    <input type="text" id="a_paterno" name="a_paterno" class="form-input" placeholder="Apellido Paterno">
+                </div>
+                <div class="input-group">
+                    <label for="a_materno">Apellido Materno</label>
+                    <input type="text" id="a_materno" name="a_materno" class="form-input" placeholder="Apellido Materno">
+                </div>
+                <div class="input-group">
+                    <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+                    <input type="text" id="fecha_nacimiento" name="fecha_nacimiento" class="form-input" placeholder="dd/mm/aaaa">
+                </div>
+                <div class="input-group">
+                    <label for="localidad">Localidad</label>
+                    <input type="text" id="localidad" name="localidad" class="form-input" placeholder="Localidad">
+                </div>
+                
+                </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-submit">Guardar Alumno</button>
+            </div>
+
+        </form>
+    </main>
+
+</body>
+</html>
